@@ -1,4 +1,4 @@
 class Club < ActiveRecord::Base
-  belongs_to :golfer
+  belongs_to :golfer, optional: true
   has_many :distances
 end
