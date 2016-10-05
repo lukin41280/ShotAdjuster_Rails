@@ -1,0 +1,20 @@
+<h1>Testing Page</h1>
+
+<p>ADD A CLUB</p>
+
+<!-- need to have the form be for a golfer -->
+<%= form_for @club do |f| %>
+<select>
+		<% @clubs.each do |club| %>
+		<option><%= club.name %></option>
+		<% end %>
+</select>
+<%= f.submit "Add Club" %>
+<% end %>
+
+
+<% @clubs.each do |club| %>
+<% if club.distances.length > 0 %>
+  <p>Club: <%= club.name %> Distances: <%= club.distances %></p>
+ <% end %>
+<% end %>
